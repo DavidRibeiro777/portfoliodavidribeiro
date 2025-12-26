@@ -4,8 +4,14 @@ import { ExternalLink, Tag, ArrowRight, Github, Sparkles } from 'lucide-react';
 import { PORTFOLIO } from '../constants';
 
 export const Portfolio: React.FC = () => {
-  // Pegamos apenas os 3 primeiros itens da array
-  const limitedPortfolio = PORTFOLIO.slice(0, 3);
+  // Definimos quais IDs queremos exibir
+  const targetIds = [1, 5, 6]; 
+  
+  // Filtramos a lista original para manter apenas os escolhidos
+  // Nota: Se seus IDs forem strings no arquivo constants, use ["1", "5", "6"]
+  const selectedProjects = PORTFOLIO.filter(project => 
+    targetIds.includes(Number(project.id))
+  );
 
   return (
     <section id="portfolio" className="py-20 md:py-28 bg-gradient-to-b from-white to-slate-50">
@@ -38,9 +44,9 @@ export const Portfolio: React.FC = () => {
           </a>
         </div>
 
-        {/* Projects Grid */}
+        {/* Projects Grid - Renderizando apenas os IDs 1, 5 e 6 */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-          {limitedPortfolio.map((project, index) => (
+          {selectedProjects.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 20 }}
@@ -124,10 +130,6 @@ export const Portfolio: React.FC = () => {
           transition={{ delay: 0.3 }}
           className="mt-16 md:mt-20 text-center"
         >
-          <div className="relative inline-block">
-            <div className="absolute inset-0 bg-gradient-to-r from-brand-500/20 to-brand-600/20 blur-xl rounded-full animate-pulse"></div>
-          </div>
-          
           <div className="mt-8 md:hidden">
             <a 
               href="https://github.com/DavidRibeiro777" 
