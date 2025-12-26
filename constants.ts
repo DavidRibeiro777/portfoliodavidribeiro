@@ -36,7 +36,7 @@ export const PORTFOLIO: PortfolioItem[] = [
   {
     id: 1,
     title: 'Menu Cafeteria',
-    category: 'Experiência Imersiva',
+    category: 'Menu Digital',
     description: 'Cardápio digital elegante para cafeteria artesanal.',
     image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=800&auto=format&fit=crop',
     tags: ['Responsivo', 'UI Design'],
@@ -79,7 +79,7 @@ export const PORTFOLIO: PortfolioItem[] = [
     category: 'Saúde',
     description: 'Site institucional para médica clínica geral.',
     image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=800&auto=format&fit=crop',
-    tags: ['Institucional', 'Confiança'],
+    tags: ['Institucional', 'Responsivo'],
     link: 'https://davidribeiro777.github.io/doutora/',
     color: 'bg-blue-100 text-blue-800'
   },
@@ -89,7 +89,7 @@ export const PORTFOLIO: PortfolioItem[] = [
     category: 'Automotivo',
     description: 'Landing page para oficina especializada.',
     image: 'https://images.unsplash.com/photo-1487754180451-c456f719a1fc?q=80&w=800&auto=format&fit=crop',
-    tags: ['Local Negócio', 'Conversão'],
+    tags: ['Pequeno Negocio', 'Landing Page'],
     link: 'https://davidribeiro777.github.io/oficina/',
     color: 'bg-slate-200 text-slate-800'
   }
