@@ -4,6 +4,9 @@ import { ExternalLink, Tag, ArrowRight, Github, Sparkles } from 'lucide-react';
 import { PORTFOLIO } from '../constants';
 
 export const Portfolio: React.FC = () => {
+  // Pegamos apenas os 3 primeiros itens da array
+  const limitedPortfolio = PORTFOLIO.slice(0, 3);
+
   return (
     <section id="portfolio" className="py-20 md:py-28 bg-gradient-to-b from-white to-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -37,7 +40,7 @@ export const Portfolio: React.FC = () => {
 
         {/* Projects Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-          {PORTFOLIO.map((project, index) => (
+          {limitedPortfolio.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 20 }}
@@ -46,10 +49,8 @@ export const Portfolio: React.FC = () => {
               transition={{ delay: index * 0.1, duration: 0.5 }}
               className="group relative bg-white rounded-3xl overflow-hidden border border-slate-100 hover:border-brand-100 shadow-lg hover:shadow-2xl hover:shadow-brand-900/5 transition-all duration-500 hover:-translate-y-2 flex flex-col"
             >
-              {/* Gradient Border Effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-white via-white to-brand-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
               
-              {/* Project Image */}
               <div className="relative aspect-video sm:h-60 lg:h-68 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-white/10 to-transparent z-10"></div>
                 <img 
@@ -58,7 +59,6 @@ export const Portfolio: React.FC = () => {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 
-                {/* Hover Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-900/80 via-brand-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6 z-20">
                   <a 
                     href={project.link}
@@ -72,16 +72,13 @@ export const Portfolio: React.FC = () => {
                 </div>
               </div>
               
-              {/* Project Content */}
               <div className="p-6 md:p-7 flex-1 flex flex-col relative">
-                {/* Category Badge */}
                 <div className="absolute -top-4 right-6">
                   <span className={`text-xs font-bold px-4 py-2 rounded-full shadow-lg ${project.color} backdrop-blur-sm bg-white/80 border border-white/20`}>
                     {project.category}
                   </span>
                 </div>
                 
-                {/* Title and Description */}
                 <div className="mb-4">
                   <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-3 group-hover:text-brand-600 transition-colors">
                     {project.title}
@@ -91,7 +88,6 @@ export const Portfolio: React.FC = () => {
                   </p>
                 </div>
                 
-                {/* Tags */}
                 <div className="mt-auto pt-4 border-t border-slate-100 group-hover:border-brand-100 transition-colors">
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map(tag => (
@@ -106,7 +102,6 @@ export const Portfolio: React.FC = () => {
                   </div>
                 </div>
                 
-                {/* Mobile Link */}
                 <a 
                   href={project.link} 
                   target="_blank" 
@@ -130,14 +125,9 @@ export const Portfolio: React.FC = () => {
           className="mt-16 md:mt-20 text-center"
         >
           <div className="relative inline-block">
-            {/* Animated background effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-brand-500/20 to-brand-600/20 blur-xl rounded-full animate-pulse"></div>
-            
-            {/* Main CTA */}
-                    
           </div>
           
-          {/* GitHub Link for Mobile */}
           <div className="mt-8 md:hidden">
             <a 
               href="https://github.com/DavidRibeiro777" 
@@ -150,9 +140,6 @@ export const Portfolio: React.FC = () => {
               <ExternalLink size={14} />
             </a>
           </div>
-          
-   
-       
         </motion.div>
       </div>
     </section>
