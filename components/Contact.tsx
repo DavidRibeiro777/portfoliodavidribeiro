@@ -77,7 +77,7 @@ export const Contact: React.FC = () => {
 
                 {/* LinkedIn */}
                 <a 
-                  href="https://linkedin.com/in/seuusuario" 
+                  href="https://www.linkedin.com/in/david-ribeiro-628996353/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-6 py-4 bg-slate-900 text-white rounded-2xl font-bold hover:bg-slate-800 transition-all border border-slate-700"
