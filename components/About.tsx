@@ -11,23 +11,22 @@ export const About: React.FC = () => {
 
 
         <div className="grid lg:grid-cols-2 gap-10 items-center">
-          
-          {/* Imagem */}
+        
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative"
-          >
-            <div className="relative rounded-xl overflow-hidden border-4 border-white shadow-lg">
-              <img 
-                src="/david2.png" 
-                alt="David Ribeiro" 
-                className="w-full h-auto object-cover aspect-square"
-              />
-            </div>
-          </motion.div>
+  initial={{ opacity: 0, x: -30 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6 }}
+  className="relative w-full max-w-[420px] mx-auto"
+>
+  <div className="relative rounded-xl overflow-hidden border-4 border-white shadow-lg aspect-[4/5]">
+    <img
+      src="/david2.png"
+      alt="David Ribeiro"
+      className="w-full h-full object-cover"
+    />
+  </div>
+</motion.div>
 
           {/* Conteúdo */}
           <motion.div
