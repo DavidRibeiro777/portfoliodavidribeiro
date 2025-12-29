@@ -35,7 +35,7 @@ export const About: React.FC = () => {
           >
             <div className="relative rounded-xl overflow-hidden border-4 border-white shadow-lg">
               <img 
-                src="/david2.jpg" 
+                src="/david2.png" 
                 alt="David Ribeiro" 
                 className="w-full h-auto object-cover aspect-square"
               />
